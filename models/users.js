@@ -25,7 +25,7 @@ module.exports = (sequelize, DataTypes) => {
 			unique: true,
 		},
 		avatar_url: {
-			type: Sequelize.TEXT,
+			type: DataTypes.TEXT,
 			allowNull: false,
 		},
 		description: {

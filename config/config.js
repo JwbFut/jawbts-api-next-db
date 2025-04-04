@@ -1,5 +1,5 @@
 module.exports = {
-  "development": {
+  "production": {
     "username": process.env.POSTGRES_USER,
     "password": process.env.POSTGRES_PASSWORD,
     "database": process.env.POSTGRES_DATABASE,
@@ -11,16 +11,17 @@ module.exports = {
     }
   },
   "test": {
-    "username": "root",
-    "password": null,
+    "username": "postgres",
+    "password": "root",
     "database": "database_test",
     "host": "127.0.0.1",
-    "dialect": "mysql"
+    "port": "5432",
+    "dialect": "postgres"
   },
-  "production": {
+  "development": {
     "username": "root",
     "password": null,
-    "database": "database_production",
+    "database": "database_development",
     "host": "127.0.0.1",
     "dialect": "mysql"
   }

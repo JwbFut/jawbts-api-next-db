@@ -21,6 +21,8 @@ module.exports = {
 				allowNull: false,
 				primaryKey: true
 			},
+		}, {
+			timestamps: false,
 		});
 
 		await queryInterface.createTable("users", {
@@ -54,10 +56,12 @@ module.exports = {
 				type: Sequelize.JSONB,
 				allowNull: false,
 			},
+		}, {
+			timestamps: false,
 		});
 	},
 
-  	async down(queryInterface, Sequelize) {
+	async down(queryInterface, Sequelize) {
 		await queryInterface.dropTable("jwks");
 		await queryInterface.dropTable("users");
 	}

@@ -13,7 +13,7 @@ module.exports = {
     await queryInterface.addColumn('users', 'ip_track', {
       type: Sequelize.JSONB,
       allowNull: false,
-      defaultValue: {}
+      defaultValue: []
     });
   },
 
